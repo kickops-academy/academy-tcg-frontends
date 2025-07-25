@@ -1,0 +1,30 @@
+<div id="main">
+  <header>
+    <h1>Poké TCG Cards (AngularJS)</h1>
+  </header>
+  <section id="content">
+    <aside id="menu">
+      <button ng-repeat="type in POKEMON_TYPES" ng-click="setFilter(type.label)">
+        {{type.icon}} {{type.label}}
+      </button>
+    </aside>
+    <main>
+      <h3 ng-if="!type" id="filter-name">No filter applied</h3>
+      <h3 ng-if="type" id="filter-name">Filter: {{type}}</h3>
+
+      <span ng-if="loading" id="loader" class="loading"></span>
+
+      <div id="stage">
+        <img
+          ng-repeat="card in cards"
+          ng-if="card.image"
+          ng-src="{{card.image}}/low.png"
+          alt="{{card.name}}"
+        />
+      </div>
+    </main>
+  </section>
+  <footer>
+    <p>&copy;2025 Kickops</p>
+  </footer>
+</div>

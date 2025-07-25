@@ -1,0 +1,17 @@
+:root {
+  --ko-yellow: #feff94;
+
+  color-scheme: dark;
+  color: #ffffff;
+  background-color: #000000;
+
+  font-family: "Bitcount", sans-serif;
+  font-size: 18px;
+  font-weight: 400;
+  line-height: 1.25;
+
+  font-synthesis: none;
+  text-rendering: optimizeLegibility;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}

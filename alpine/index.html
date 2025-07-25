@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+  <head>
+    <meta charset="UTF-8" />
+    <link rel="icon" type="image/svg+xml" href="/vite.svg" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Poké TCG : Alpine</title>
+
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Bitcount:wght@100..900&family=DM+Sans:ital,opsz,wght@0,9..40,100..1000;1,9..40,100..1000&family=Recursive:wght@300..1000&display=swap"
+      rel="stylesheet"
+    />
+
+    <link rel="stylesheet" href="/src/style.css" />
+  </head>
+  <body>
+    <div id="main" x-data="state">
+      <header>
+        <h1>Poké TCG Cards (Alpine)</h1>
+      </header>
+      <section id="content">
+        <aside id="menu">
+          <template x-for="type in types">
+            <button 
+              x-text="type.label + type.icon"
+              @click="executeRequest(type.label)"
+            ></button>
+          </template>
+        </aside>
+        <main>
+          <template x-if="!filter">
+            <h3 id="filter-name">No filter applied</h3>
+          </template>
+
+          <template x-if="filter">
+            <h3 id="filter-name" x-text="'Filter: ' + filter"></h3>
+          </template>
+          
+          <template x-if="loading">
+            <span id="loader" class="loading"></span>
+          </template>
+
+          <div id="stage">
+            <template x-if="cards.length === 0">
+              <span>No cards.</span>
+            </template>
+
+            <template x-for="item in cards">
+              <template x-data="{ error: false }" x-if="!error">
+                <img :src="item.image + '/low.png'" :alt="item.name" x-on:error="error = true" />
+              </template>
+            </template>
+          </div>
+        </main>
+      </section>
+      <footer>
+        <p>&copy;2025 Kickops</p>
+      </footer>
+    </div>
+
+    <script type="module" src="/src/main.js" defer></script>
+  </body>
+</html>

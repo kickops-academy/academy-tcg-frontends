@@ -1,0 +1,31 @@
+<style>
+  * {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+  }
+
+  #stage {
+    color: color-mix(in srgb, var(--ko-yellow) 45%, #000000);
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 0.5rem;
+    row-gap: 1rem;
+    column-gap: 1rem;
+    font-weight: 300;
+
+    img {
+      width: 100%;
+      margin: 0;
+      padding: 0;
+    }
+  }
+
+  @media (min-width: 768px) {
+    #stage {
+      grid-template-columns: 1fr 1fr 1fr;
+    }
+  }
+</style>
+
+<div id="stage">No cards.</div>

@@ -1,0 +1,66 @@
+:root {
+  --ko-yellow: #feff94;
+
+  color-scheme: dark;
+  color: #ffffff;
+  background-color: #000000;
+
+  font-family: "Bitcount", sans-serif;
+  font-size: 18px;
+  font-weight: 400;
+  line-height: 1.25;
+
+  font-synthesis: none;
+  text-rendering: optimizeLegibility;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+/* @keyframes loading {
+  0% {
+    content: "Loading";
+  }
+  
+  25% {
+    content: "Loading.";
+  }
+  
+  50% {
+    content: "Loading..";
+  }
+  
+  75% {
+    content: "Loading...";
+  }
+  
+  100% {
+    content: "Loading...";
+  }
+}
+
+.c-yellow-lighter {
+  color: color-mix(in srgb, var(--ko-yellow) 75%, #ffffff);
+}
+
+
+.c-yellow-light {
+  color: color-mix(in srgb, var(--ko-yellow) 100%, #ffffff);
+}
+
+.c-yellow {
+  color: var(--ko-yellow);
+}
+
+.c-yellow-dark {
+  color: color-mix(in srgb, var(--ko-yellow) 50%, #000000);
+}
+
+.c-yellow-darker {
+  color: color-mix(in srgb, var(--ko-yellow) 25%, #000000);
+} */
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}

@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+  <head>
+    <meta charset="UTF-8" />
+    <link rel="icon" type="image/svg+xml" href="/vite.svg" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Poké TCG : Vanilla (ES3)</title>
+
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Bitcount:wght@100..900&family=DM+Sans:ital,opsz,wght@0,9..40,100..1000;1,9..40,100..1000&family=Recursive:wght@300..1000&display=swap"
+      rel="stylesheet"
+    />
+
+    <link rel="stylesheet" href="/src/style.css" />
+  </head>
+  <body>
+    <div id="main">
+      <header>
+        <h1>Poké TCG Cards (Vanilla ES3)</h1>
+      </header>
+      <section id="content">
+        <aside id="menu"></aside>
+        <main>
+          <h3 id="filter-name">No filter applied</h3>
+          <span id="loader" class="loading"></span>
+          <div id="stage">
+            No cards.
+          </div>
+        </main>
+      </section>
+      <footer>
+        <p>&copy;2025 Kickops</p>
+      </footer>
+    </div>
+
+    <script type="module" src="/src/main.js"></script>
+  </body>
+</html>

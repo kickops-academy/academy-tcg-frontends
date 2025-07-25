@@ -1,0 +1,43 @@
+<div id="main">
+  <header>
+    <h1>Poké TCG Cards (Angular)</h1>
+  </header>
+  <section id="content">
+    <aside id="menu">
+      @for (item of pokemonTypes; track item) {
+        <app-button
+          [label]="item[0]"
+          [icon]="item[1]"
+          (clicked)="selectType(item[0])"
+        ></app-button>
+      }
+    </aside>
+    <main>
+      <h3 id="filter-name">
+        {{type() ? `Filter: ${type()}` : 'No filter applied'}}
+      </h3>
+
+      @if (loading()) {
+        <span id="loader" class="loading"></span>
+      }
+
+      <div id="stage">
+        @for (card of cards(); track card.id) {
+          @if (card.image) {
+            <app-card
+              [source]="`${card.image}/low.png`"
+              [alt]="card.name"
+            ></app-card>
+          }
+        }
+
+        @if (cards().length === 0 && !loading()) {
+          No cards.
+        }
+      </div>
+    </main>
+  </section>
+  <footer>
+    <p>&copy;2025 Kickops</p>
+  </footer>
+</div>
